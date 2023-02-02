@@ -10,8 +10,8 @@ const clientRoutes = Router();
 
 clientRoutes.post("", ensureAuthMiddleware, createClientController);
 clientRoutes.get("", ensureAuthMiddleware, listClientsController);
-clientRoutes.get("/:id", ensureAuthMiddleware, retrieveClientController);
-clientRoutes.patch("/:id", ensureAuthMiddleware, updateClientController);
-clientRoutes.delete("/:id", ensureAuthMiddleware, deleteClientController);
+clientRoutes.get("/:client_id", ensureAuthMiddleware, retrieveClientController);
+clientRoutes.patch("/:client_id", ensureAuthMiddleware, updateClientController);
+clientRoutes.delete("/:client_id", ensureAuthMiddleware, deleteClientController);
 
 export default clientRoutes;
