@@ -1,5 +1,6 @@
 import { Router } from "express";
 import createClientController from "../controllers/clients/createClient.controller";
+import deleteClientController from "../controllers/clients/deleteClient.controller";
 import listClientsController from "../controllers/clients/listClients.controller";
 import retrieveClientController from "../controllers/clients/retrieveClient.controller";
 import updateClientController from "../controllers/clients/updateClient.controller";
@@ -11,5 +12,6 @@ clientRoutes.post("", ensureAuthMiddleware, createClientController);
 clientRoutes.get("", ensureAuthMiddleware, listClientsController);
 clientRoutes.get("/:id", ensureAuthMiddleware, retrieveClientController);
 clientRoutes.patch("/:id", ensureAuthMiddleware, updateClientController);
+clientRoutes.delete("/:id", ensureAuthMiddleware, deleteClientController);
 
 export default clientRoutes;
