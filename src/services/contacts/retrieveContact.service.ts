@@ -3,11 +3,11 @@ import { Contact } from "../../entities/contact.entity";
 import { AppError } from "../../errors/AppError";
 import { IContact } from "../../interfaces/contacts.interface";
 
-const retrieveContactService = async (id: string): Promise<IContact> => {
+const retrieveContactService = async (contactId: string): Promise<IContact> => {
   const contactRepository = AppDataSource.getRepository(Contact);
   const contact = await contactRepository.findOne({
     where: {
-      id
+      id: contactId
     },
     relations: {
       client: true

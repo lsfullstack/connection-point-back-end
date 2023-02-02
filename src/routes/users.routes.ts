@@ -13,9 +13,9 @@ const userRoutes = Router();
 
 userRoutes.post("", ensureEmailAlreadyExistMiddleware, createUserController);
 userRoutes.get("/profile", ensureAuthMiddleware, userProfileController);
-userRoutes.get("/:user_id", ensureAuthMiddleware, ensureIsAdmMiddleware, retrieveUserController);
+userRoutes.get("/:id", ensureAuthMiddleware, ensureIsAdmMiddleware, retrieveUserController);
 userRoutes.get("", ensureAuthMiddleware, ensureIsAdmMiddleware, listUsersController);
-userRoutes.patch("/:user_id", ensureAuthMiddleware, updateUserController);
-userRoutes.delete("/:user_id", ensureAuthMiddleware, deleteUserController);
+userRoutes.patch("/:id", ensureAuthMiddleware, updateUserController);
+userRoutes.delete("/:id", ensureAuthMiddleware, deleteUserController);
 
 export default userRoutes;

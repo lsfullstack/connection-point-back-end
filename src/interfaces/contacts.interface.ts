@@ -13,3 +13,8 @@ export interface IContact extends IContactRequest {
   client: IClient,
 }
 
+export interface IContactUpdate {
+  name?: string,
+  email?: string,
+  phone?: string,
+}

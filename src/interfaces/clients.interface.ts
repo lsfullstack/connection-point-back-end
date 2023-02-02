@@ -16,6 +16,9 @@ export interface IClient extends IClientRequest {
   contact: IContact[],
 }
 
-export interface ICLientUpdate extends IClientRequest {
-  
+export interface ICLientUpdate {
+  name?: string,
+  email?: string,
+  phone?: string,
+  age?: number,
 }
