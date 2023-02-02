@@ -13,3 +13,7 @@ export interface IClient extends IClientRequest {
   updatedAt: Date,
   user: IUser,
 }
+
+export interface ICLientUpdate extends IClientRequest {
+  
+}
