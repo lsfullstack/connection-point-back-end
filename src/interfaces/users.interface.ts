@@ -13,6 +13,13 @@ export interface IUser extends IUserRequest {
 }
 
 export interface IUserLogin {
-  username: string;
-  password: string;
+  username: string,
+  password: string,
+}
+
+export interface IUserUpdate {
+  name?: string,
+  username?: string,
+  email?: string,
+  password?: string,
 }
