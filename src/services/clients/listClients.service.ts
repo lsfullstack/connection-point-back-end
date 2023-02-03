@@ -11,7 +11,7 @@ const listClientsService = async (idLoggedUser: string): Promise<IClient[]> => {
     },
     relations: {
       user: true,
-      contact: true
+      contacts: true
     }
   });
 

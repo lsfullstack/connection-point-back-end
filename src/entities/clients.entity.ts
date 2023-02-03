@@ -28,8 +28,8 @@ class Client {
   @ManyToOne(() => User)
   user: User
  
-  @OneToMany(() => Contact, contact => contact.client)
-  contact: Contact[]
+  @OneToMany(() => Contact, contact => contact.client, { cascade: true })
+  contacts: Contact[]
 }
 
 export { Client };

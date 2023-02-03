@@ -13,10 +13,10 @@ export interface IClient extends IClientRequest {
   createdAt: Date,
   updatedAt: Date,
   user: IUser,
-  contact: IContact[],
+  contacts: IContact[],
 }
 
-export interface ICLientUpdate {
+export interface IClientUpdate {
   name?: string,
   email?: string,
   phone?: string,
