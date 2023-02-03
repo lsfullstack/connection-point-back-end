@@ -21,7 +21,7 @@ class Contact {
   @UpdateDateColumn()
   updatedAt: Date;
 
-  @ManyToOne(() => Client)
+  @ManyToOne(() => Client, { onDelete: 'CASCADE' })
   client: Client
 }
 

@@ -1,9 +1,9 @@
 import AppDataSource from "../../data-source";
 import { Client } from "../../entities/clients.entity";
 import { AppError } from "../../errors/AppError";
-import { IClient, ICLientUpdate } from "../../interfaces/clients.interface";
+import { IClient, IClientUpdate } from "../../interfaces/clients.interface";
 
-const updateClientService = async (clientId: string, client: ICLientUpdate): Promise<IClient> => {
+const updateClientService = async (clientId: string, client: IClientUpdate): Promise<IClient> => {
   const { name, email, phone, age } = client;
   const clientRepository = AppDataSource.getRepository(Client);
   const findClient = await clientRepository.findOne({ 
