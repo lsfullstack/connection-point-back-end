@@ -24,10 +24,10 @@ const updateClientService = async (clientId: string, client: ICLientUpdate): Pro
       id: clientId
     },
     {
-      name,
-      email,
-      phone,
-      age
+      name: name ? name : findClient.name,
+      email: email ? email : findClient.email,
+      phone: phone ? phone : findClient.phone,
+      age: age ? age : findClient.age
     }
   );
 

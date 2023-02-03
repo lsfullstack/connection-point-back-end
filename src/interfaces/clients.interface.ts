@@ -1,3 +1,4 @@
+import { IContact } from "./contacts.interface";
 import { IUser } from "./users.interface";
 
 export interface IClientRequest {
@@ -12,8 +13,12 @@ export interface IClient extends IClientRequest {
   createdAt: Date,
   updatedAt: Date,
   user: IUser,
+  contact: IContact[],
 }
 
-export interface ICLientUpdate extends IClientRequest {
-  
+export interface ICLientUpdate {
+  name?: string,
+  email?: string,
+  phone?: string,
+  age?: number,
 }

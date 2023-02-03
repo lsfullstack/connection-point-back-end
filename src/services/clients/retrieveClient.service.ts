@@ -11,6 +11,7 @@ const retrieveClientService = async (clientId: string): Promise<IClient> => {
     },
     relations: {
       user: true,
+      contact: true,
     }
   });
 

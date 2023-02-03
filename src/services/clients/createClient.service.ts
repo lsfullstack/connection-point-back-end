@@ -17,7 +17,8 @@ const createClientService = async (data: IClientRequest, user: string): Promise<
     email,
     phone,
     age,
-    user: findUser!
+    user: findUser!,
+    contact: []
   });
 
   await clientRepository.save(client);
