@@ -17,7 +17,7 @@ app.use("/contacts", contactRoutes);
 
 app.use(handleErrorMiddleware);
 
-const port = 3000;
+const port = 3333;
 
 app.listen(port, () => {
   console.log(`Server running in port ${port}`);
